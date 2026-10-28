@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.3.1/css/all.css"
+        integrity="sha512-x9WwyMYBnlXMNQ6kQ/Lyzu1NqIhLQKL5Oq6xByfXuRj7s9CskyCbLv/1IjqzJmXwFXWr0ov6jBV7Qbc0hh9nHg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="style.css">
+</head>
+</head>
+    <div class="video-gallery">
+
+        <div class="video-card" data-id="1"  onclick="openBigVideo(0)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="videos/Artificial.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>Artificial - Official Teaser Trailer - In Theaters Christmas Day</h3>
+                <p>7,2 млн просмотров 1 мес. назад</p>
+            </div>
+        </div>
+
+        <div class="video-card" data-id="2" onclick="openBigVideo(1)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="videos/Armenian.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>ԳՈՂՈՒԹՅՈՒՆ ՀԱՅԿԱԿԱՆ ՁԵՎՈՎ - The Armenian Job | Official Trailer 2025 | 4K</h3>
+                <p>675 тыс. просмотров 1 г. назад</p>
+            </div>
+        </div>
+
+        <div class="video-card" data-id="3"  onclick="openBigVideo(2)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="videos/Titanic.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>Titanic 2 (2026) – First Trailer | Leonardo DiCaprio, Kate Winslet Reunited</h3>
+                <p>8,8 млн просмотров 1 г. назад</p>
+            </div>
+        </div>
+
+        <div class="video-card" data-id="4" onclick="openBigVideo(3)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="videos/playback.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info">
+                <h3>Materialists | Official Trailer HD | A24</h3>
+                <p>24 млн просмотров 1 г. назад</p>
+            </div>
+        </div>
+
+        <div class="video-card" data-id="5" onclick="openBigVideo(4)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="videos/back.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info" >
+                <h3>The Body | Official Trailer | Netflix</h3>
+                <p>181 тыс. просмотров 19ч назад</p>
+            </div>
+        </div>
+
+        <div class="video-card" data-id="6" onclick="openBigVideo(5)">
+            <div class="video-container">
+                <video class="my-video" muted loop preload="metadata">
+                    <source src="video/Remain.mp4" type="video/mp4">
+                </video>
+            </div>
+            <div class="video-info" >
+                <h3>Remain | Official Teaser</h3>
+                <p>20 млн просмотров 1 мес. назад</p>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="main-watch-view" style="display: none;">
+        <button class="back-to-gallery-btn">← Վերադառնալ գլխավոր էջ</button>
+
+        <div class="big-video-container">
+            <video class="big-player" preload="metadata">
+                <source src="" type="video/mp4">
+            </video>
+            <div class="video-controls">
+                <input type="range" class="timeline-range" id="bigTimeline" value="0" min="0" step="0.1">
+                <div class="controls-bottom" onclick="BigVideo(0)">
+                    <i class="fa-solid fa-play play-icon" id="bigPlayIcon" style="display: none;"></i>
+                    <i class="fa-solid fa-pause pause-icon" id="bigPauseIcon" ></i>
+                    <div class="volume-box">
+                        <span id="volume">🔊</span>
+                        <input type="range" class="volume-range" id="bigVolumeRange" min="0" max="1" step="0.1"
+                            value="1">
+                        <span id="bigCurrentTime">00:00</span>
+                        <span id="bigDurationTime">00:00</span>
+                    </div>
+                </div>
+            </div>
+            <div class="big-video-info">
+                <h2 class="big-title">Վերնագիր</h2>
+                <p class="big-views">Դիտումներ</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="index.js"></script>
+</body>
+
+</html>

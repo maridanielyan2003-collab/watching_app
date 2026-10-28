@@ -1,0 +1,211 @@
+  /* Ընդհանուր ոճեր */
+body {
+    background-color: #0f0f0f;
+    color: #ffffff;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+}
+
+/* Փոքր վիդեոների ցանկի դասավորություն (Grid) */
+.video-gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Վիդեո քարտ */
+.video-card {
+    background-color: #1f1f1f;
+    border-radius: 12px;
+    overflow: hidden;
+    cursor: pointer;
+    transition: transform 0.2s;
+}
+
+.video-card:hover {
+    transform: scale(1.02);
+}
+
+.video-container {
+    position: relative;
+    width: 100%;
+    background-color: #000;
+}
+
+.my-video {
+    width: 100%;
+    display: block;
+    aspect-ratio: 16 / 9;
+}
+
+/* Վիդեոյի կառավարման վահանակ (փոքրերի համար) */
+.video-controls {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.85));
+    padding: 12px 10px 10px 10px;
+    box-sizing: border-box;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.video-container:hover .video-controls {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* Կապույտ սահիչներ (Timeline & Volume) */
+.timeline-range {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 8px;
+    accent-color: #c4c7c8;
+    height: 5px;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 4px;
+}
+
+.volume-range {
+    width: 60px;
+    accent-color: #c4c7c8;
+    cursor: pointer;
+}
+
+.controls-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    font-size: 14px;
+    color: #ffffff;
+}
+
+.controls-bottom i {
+    cursor: pointer;
+    font-size: 16px;
+    transition: color 0.2s;
+}
+
+.controls-bottom i:hover {
+    color: #3ea6ff;
+}
+
+.volume-box {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Վիդեոյի տեղեկություններ */
+.video-info {
+    padding: 12px;
+}
+
+.video-info h3 {
+    font-size: 15px;
+    margin: 0 0 6px 0;
+    line-height: 1.4;
+    color: #ffffff;
+}
+
+.video-info p {
+    font-size: 13px;
+    color: #aaa;
+    margin: 0;
+}
+
+/* --- ՄԵԾ ԴԻՏՄԱՆ ԷԿՐԱՆԻ ՈՃԵՐ --- */
+.main-watch-view {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: #0f0f0f;
+}
+
+.big-video-container {
+    position: relative;
+    width: 100%;
+    max-width: 900px;
+    background: #000;
+    border-radius: 12px;
+    overflow: hidden;
+}
+.big-video-container:hover .big-video-controls {
+    opacity: 0;
+    visibility:visible;
+}
+.big-player {
+    width: 100%;
+    display: block;
+    cursor: pointer;
+    aspect-ratio: 16 / 9;
+}
+
+/* Մեծ վիդեոյի կառավարման վահանակ (միշտ տեսանելի կամ նորմալ աշխատող) */
+.big-video-container .video-controls {
+    position: relative; /* Որպեսզի թաքնված չլինի hover-ից */
+    opacity:1;
+    visibility: visible;
+    background: rgba(0, 0, 0, 0.85);
+    padding: 12px 15px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Մեծ վիդեոյի timeline */
+.big-video-container .timeline-range {
+    width: 100%;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+/* Մեծ վիդեոյի ներքևի տող */
+.big-video-container .controls-bottom {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 15px;
+    color: #fff;
+}
+
+.big-video-container .controls-bottom i {
+    font-size: 18px;
+    cursor: pointer;
+}
+
+/* Մեծ վիդեոյի ձայնի տուփ և ժամանակներ */
+.big-video-container .volume-box {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-left: auto; /* Ձայնն ու ժամանակները տանում է աջ կողմ */
+    font-size: 14px;
+}
+
+.big-video-container .volume-range {
+    width: 80px;
+    cursor: pointer;
+}
+
+/* Վերադարձի կոճակ */
+.back-to-gallery-btn {
+    background: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    margin-bottom: 15px;
+    font-size: 14px;
+    transition: background 0.2s;
+}
+
+.back-to-gallery-btn:hover {
+    background: #555;
+}
